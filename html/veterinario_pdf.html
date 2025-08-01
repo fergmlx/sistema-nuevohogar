@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Información de Cuenta - Veterinario</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2cm;
+    }
+
+    body {
+      font-family: 'Poppins';
+      color: #333;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #02298A;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: #02298A;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      color: #02298A;
+      border-left: 6px solid #02298A;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    .info-group {
+      margin-bottom: 25px;
+    }
+
+    .info-item {
+      margin-bottom: 12px;
+    }
+
+    .info-item label {
+      display: block;
+      font-weight: 600;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .info-item .value {
+      display: block;
+      font-size: 13px;
+      background: #f0f3fa;
+      padding: 8px 12px;
+      border-left: 4px solid #02298A;
+      border-radius: 5px;
+      color: #222;
+    }
+
+    .role-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .role-info ul li {
+      background: #02298A;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .generation-date {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Información de Cuenta</h1>
+      <p>Veterinario del Sistema NuevoHogar</p>
+    </div>
+
+    <div class="account-info">
+      <div class="section-title">Datos de la Cuenta</div>
+
+      <div class="info-group">
+        <div class="info-item">
+          <label>Nombre Completo</label>
+          <span class="value">${nombre}</span>
+        </div>
+
+        <div class="info-item">
+          <label>Correo Electrónico</label>
+          <span class="value">${correo}</span>
+        </div>
+
+        <div class="info-item">
+          <label>Rol Asignado</label>
+          <span class="value">${rol}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="role-info">
+      <div class="section-title">Funciones según tu rol</div>
+      <ul>
+        <li>Visualización de fichas y seguimiento de tratamientos.</li>
+        <li>Registro de consultas, tratamientos y revisiones.</li>
+        <li>Gestión de medicamentos y suministros médicos.</li>
+      </ul>
+    </div>
+
+    <div class="generation-date">
+      Documento generado automáticamente | NuevoHogar © 2025
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<ivy-module version="2.0">
+    <info organisation="com.example" module="mi-proyecto"/>
+    <dependencies>
+        <dependency org="com.itextpdf" name="itext7-core" rev="7.2.5"/>
+        <!-- O para iText 5: -->
+        <!-- <dependency org="com.itextpdf" name="itextpdf" rev="5.5.13.3"/> -->
+    </dependencies>
+</ivy-module>

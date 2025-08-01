@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido a NuevoHogar!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #021B79 0%, #0575E6 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0575E6 0%, #02298A 85%, #021B79 100%);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .welcome-message h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+        }
+        
+        .welcome-message p {
+            font-size: 16px;
+            color: #718096;
+            line-height: 1.7;
+        }
+
+        .ex-message {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        
+        .ex-message h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+        }
+        
+        .ex-message p {
+            font-size: 16px;
+            color: #718096;
+            line-height: 1.7;
+        }
+        
+        .highlight-name {
+            color: #0575E6;
+            font-weight: 600;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 4px solid #0575E6;
+        }
+        
+        .info-card h3 {
+            color: #2d3748;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+       
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #4a5568;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-list li::before {
+            content: '✓';
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer p {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            margin: 0 8px;
+            line-height: 40px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 1000px) {
+            .container {
+                margin: 10px;
+                border-radius: 16px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .welcome-message h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Bienvenido a NuevoHogar!</h1>
+            <p>Simplificando el camino de la jaula al sofá</p>
+        </div>
+        
+        <div class="content">
+            <div class="welcome-message">
+                <h2>¡Hola <span class="highlight-name">${nombre}</span>!</h2>
+                <p>Estamos emocionados de tenerte como parte de nuestra familia. Ya puedes comenzar a hacer la diferencia en la vida de muchos animales que necesitan nuestro amor y cuidado.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3> &#127881; Tu cuenta está lista</h3>
+                <div class="welcome-message">
+                    <p>Tu cuenta ha sido creada exitosamente con el rol de <strong>${rol}</strong>. Adjunto a este correo encontrarás un documento PDF con todos los detalles de tu cuenta y las funciones disponibles para tu rol.</p>
+                </div>
+            </div>
+
+            <div class="ex-message">
+                <p>En NuevoHogar, estamos comprometidos con brindar una cálida estancia a las mascotas y contribuir a su bienestar hasta encontrar un hogar permanente.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3> &#127881; Próximos pasos</h3>
+                <ul class="info-list">
+                    <li>Revisa el documento PDF adjunto con los detalles de tu cuenta</li>
+                    <li>Explora tu panel de control personalizado</li>
+                    <li>Participa en los próximos eventos de adopción</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>NuevoHogar</strong> - Conectando corazones, transformando vidas</p>
+            <p>Si tienes alguna pregunta, no dudes en contactarnos</p>
+            <p style="margin-top: 20px; font-size: 12px; color: #adb5bd;">
+                Este correo fue enviado automáticamente. Por favor, no respondas a este mensaje.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
